@@ -1,13 +1,24 @@
-package Desafio_Avanade_DIO.model;
+package com.silassefas.domain.model;
+
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
-public class News {
+@Entity(name = "tb_account")
+public class Account {
 
+    @Id
     private Long id;
-    private String numbaer;
+
+    @Column(unique = true, nullable = false)
+    private String number;
+
     private String agency;
+
+    @Column(precision = 13, scale = 2)
     private BigDecimal balance;
+
+    @Column(name = "additional_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
     public Long getId() {
@@ -18,12 +29,12 @@ public class News {
         this.id = id;
     }
 
-    public String getNumbaer() {
-        return numbaer;
+    public String getNumber() {
+        return number;
     }
 
-    public void setNumbaer(String numbaer) {
-        this.numbaer = numbaer;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public String getAgency() {

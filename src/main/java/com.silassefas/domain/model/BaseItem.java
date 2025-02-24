@@ -1,7 +1,12 @@
-package Desafio_Avanade_DIO.model;
+package com.silassefas.domain.model;
 
-public class Feature {
+import jakarta.persistence.*;
 
+@MappedSuperclass
+public class BaseItem {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String icon;
     private String descricao;

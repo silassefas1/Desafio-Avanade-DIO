@@ -2,8 +2,17 @@ package Desafio_Avanade_DIO.model;
 
 public class Feature {
 
+    private Long id;
     private String icon;
     private String descricao;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getIcon() {
         return icon;

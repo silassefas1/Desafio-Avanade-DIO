@@ -1,11 +1,22 @@
 package Desafio_Avanade_DIO.model;
 
+import java.math.BigDecimal;
+
 public class News {
 
+    private Long id;
     private String numbaer;
     private String agency;
-    private Number balance;
-    private Number limit;
+    private BigDecimal balance;
+    private BigDecimal limit;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getNumbaer() {
         return numbaer;
@@ -23,19 +34,19 @@ public class News {
         this.agency = agency;
     }
 
-    public Number getBalance() {
+    public BigDecimal getBalance() {
         return balance;
     }
 
-    public void setBalance(Number balance) {
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
-    public Number getLimit() {
+    public BigDecimal getLimit() {
         return limit;
     }
 
-    public void setLimit(Number limit) {
+    public void setLimit(BigDecimal limit) {
         this.limit = limit;
     }
 }

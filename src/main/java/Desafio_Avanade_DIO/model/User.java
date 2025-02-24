@@ -1,12 +1,23 @@
 package Desafio_Avanade_DIO.model;
 
+import java.util.List;
+
 public class User {
 
+    private Long id;
     private String name;
     private Account account;
-    private Feature[] features;
+    private List<Feature> features;
     private Card card;
-    private News[] news;
+    private List<Feature> news;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -24,11 +35,11 @@ public class User {
         this.account = account;
     }
 
-    public Feature[] getFeatures() {
+    public List<Feature> getFeatures() {
         return features;
     }
 
-    public void setFeatures(Feature[] features) {
+    public void setFeatures(List<Feature> features) {
         this.features = features;
     }
 
@@ -40,11 +51,11 @@ public class User {
         this.card = card;
     }
 
-    public News[] getNews() {
+    public List<Feature> getNews() {
         return news;
     }
 
-    public void setNews(News[] news) {
+    public void setNews(List<Feature> news) {
         this.news = news;
     }
 }

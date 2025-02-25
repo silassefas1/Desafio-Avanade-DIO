@@ -22,11 +22,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User create(User user) {
-        if(userRepository.existsByAccountNumber(user.getAccount().getNumber())) {
+    public User create(User userToCreate) {
+        if(userRepository.existsByAccountNumber(userToCreate.getAccount().getNumber())) {
             throw new IllegalArgumentException("Account number already exists");
         }
-
-        return userRepository.save(user);
+        return userRepository.save(userToCreate);
     }
 }

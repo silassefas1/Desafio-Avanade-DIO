@@ -1,0 +1,1 @@
+web: java -jar build/libs/Desafio-Avanade-DIO-0.0.1-SNAPSHOT.jar
